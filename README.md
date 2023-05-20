@@ -70,7 +70,7 @@ With the phone in android, boot it into download mode: ```adb reboot download```
 Now flash the ```vbmeta.img``` and the ```recovery.img``` to the phone: <br>
 ```sudo heimdall flash --vbmeta vbmeta.img --recovery recovery.img``` <br>
 The phone will automatically reboot back into android. <br>
-Congratulations! TWRP is now flashed to the phone.
+Congratulations! You have now flashed TWRP to your phone.
 
 ## Step 6 - Booting into TWRP
 With ADB: ```adb reboot recovery``` <br>
@@ -78,7 +78,7 @@ Without ADB: Hold the volume up button and the power button. Once the phone powe
 
 # NOTICE
 I am not responsible for you bricking your phone. <br>
-Also please backup for phone's ROM or at least have a ROM you can flash back onto your phone in the case of a brickage.
+Also please backup the phone's ROM or at least have a ROM you can flash back onto your phone in the case of a brickage.
 
 # References
 blah
