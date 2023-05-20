@@ -39,10 +39,10 @@ repo sync
 Note: This will take a while as it has to download roughly 30 GB.
 
 ## Step 3 - Apply the a32x Kernel and Device tree
-Create the folder ```.repo/local_manifests``` if it does not exist already. <br>
+Create the folder ```.repo/local_manifests/``` if it does not exist already. <br>
 Take the ```a32x.xml``` from this repo and put it in ```.repo/local_manifests/``` <br>
 Resync the repo with ```repo sync``` <br>
-This won't take nearly as long because it only has to download 2 new repositories.
+Note: This won't take nearly as long because it only has to download 2 new repositories.
 
 ## Step 4 - Build the recovery image
 Configure the build:
@@ -63,11 +63,10 @@ export OUT_DIR=out_directory
 Note: This could take up to an hour depending on processor speed.
 
 ## Step 5 - Flash the recovery image
-The compiler will tell you where the recovery.img is, but if you didn't change the output directory, it will be in ```out/target/product/a32x/recovery.img``` <br>
+The compiler will tell you where the ```recovery.img``` is, but if you didn't change the output directory, it will be in ```out/target/product/a32x/recovery.img``` <br>
 Copy the ```recovery.img``` to an empty folder. <br>
 Download the ```vbmeta.img``` in this repo to the same empty folder. <br>
-With the phone in android, boot it into download mode: <br>
-```adb reboot download``` <br>
+With the phone in android, boot it into download mode: ```adb reboot download``` <br>
 Now flash the ```vbmeta.img``` and the ```recovery.img``` to the phone: <br>
 ```sudo heimdall flash --vbmeta vbmeta.img --recovery recovery.img``` <br>
 The phone will automatically reboot back into android. <br>
@@ -78,7 +77,8 @@ With ADB: ```adb reboot recovery``` <br>
 Without ADB: Hold the volume up button and the power button. Once the phone powers on, let go of the power button.
 
 # NOTICE
-I am not responsible for you bricking your phone.
+I am not responsible for you bricking your phone. <br>
+Also please backup for phone's ROM or at least have a ROM you can flash back onto your phone in the case of a brickage.
 
 # References
 blah
