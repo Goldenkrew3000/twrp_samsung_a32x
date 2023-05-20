@@ -1,13 +1,13 @@
-# TWRP for Samsung Galaxy A32 5G (a32x/A326B)\
+# TWRP for Samsung Galaxy A32 5G (a32x/A326B)
 
 # Issues / Todo
 - Check if all the mount points are correct
 - Fix issue with kernel not compiling (Currently using prebuilt kernel extracted from original OS)
-- I don't think fastboot is working correctly
+- In fastboot mode, ADB is working but Fastboot is not
 
 # Building
 ## Step 0 - Minimum Requirements
-- 64-bit x86_64 processor
+- Relatively recent x86_64 processor (Like after a 2nd gen Intel processor)
 - 16GB RAM
 - 40GB HDD Space
 - Ubuntu 22.04 LTS
@@ -24,7 +24,7 @@ Create a build directory:
 mkdir ~/twrp
 cd ~/twrp
 ```
-From now on, this whole guide takes place in this build directory
+From now on, this whole guide takes place in this build directory.
 
 ## Step 2 - Downloading the base TWRP sources
 Initialize repo.
@@ -39,9 +39,9 @@ repo sync
 Note: This will take a while as it has to download roughly 30 GB.
 
 ## Step 3 - Apply the a32x Kernel and Device tree
-Create the folder ```.repo/local_manifests``` if it does not exist already.
-Take the ```a32x.xml``` from this repo and put it in ```.repo/local_manifests/```
-Resync the repo with ```repo sync```
+Create the folder ```.repo/local_manifests``` if it does not exist already. <br>
+Take the ```a32x.xml``` from this repo and put it in ```.repo/local_manifests/``` <br>
+Resync the repo with ```repo sync``` <br>
 This won't take nearly as long because it only has to download 2 new repositories.
 
 ## Step 4 - Build the recovery image
@@ -63,18 +63,18 @@ export OUT_DIR=out_directory
 Note: This could take up to an hour depending on processor speed.
 
 ## Step 5 - Flash the recovery image
-The compiler will tell you where the recovery.img is, but if you didn't change the output directory, it will be in ```out/target/product/a32x/recovery.img```
-Copy the ```recovery.img``` to an empty folder.
-Download the ```vbmeta.img``` in this repo to the same empty folder.
-With the phone in android, boot it into download mode:
-```adb reboot download```
-Now flash the ```vbmeta.img``` and the ```recovery.img``` to the phone:
-```sudo heimdall flash --vbmeta vbmeta.img --recovery recovery.img```
-The phone will automatically reboot back into android.
+The compiler will tell you where the recovery.img is, but if you didn't change the output directory, it will be in ```out/target/product/a32x/recovery.img``` <br>
+Copy the ```recovery.img``` to an empty folder. <br>
+Download the ```vbmeta.img``` in this repo to the same empty folder. <br>
+With the phone in android, boot it into download mode: <br>
+```adb reboot download``` <br>
+Now flash the ```vbmeta.img``` and the ```recovery.img``` to the phone: <br>
+```sudo heimdall flash --vbmeta vbmeta.img --recovery recovery.img``` <br>
+The phone will automatically reboot back into android. <br>
 Congratulations! TWRP is now flashed to the phone.
 
 ## Step 6 - Booting into TWRP
-With ADB: ```adb reboot recovery```
+With ADB: ```adb reboot recovery``` <br>
 Without ADB: Hold the volume up button and the power button. Once the phone powers on, let go of the power button.
 
 # NOTICE
