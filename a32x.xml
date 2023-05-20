@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="Goldenkrew3000/android_kernel_samsung_a32x" path="kernel/samsung/a32x" remote="github" revision="android-13" />
+  <project name="Goldenkrew3000/android_device_samsung_a32x" path="device/samsung/a32x" remote="github" revision="twrp" />
+</manifest>
