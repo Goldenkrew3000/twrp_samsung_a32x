@@ -27,7 +27,7 @@ sudo ln -s /usr/bin/python3 /usr/bin/python
 
 APT provides an old version of repo that isn't really functional now. To install the latest version of repo:
 ```
-sudo wget https://storage.googleapis.com/git-repo-downloads/repo /usr/bin/repo
+sudo wget https://storage.googleapis.com/git-repo-downloads/repo -O /usr/bin/repo
 sudo chmod +x /usr/bin/repo
 ```
 
@@ -63,6 +63,11 @@ Resync the repo with ```repo sync``` <br>
 Note: This won't take nearly as long because it only has to download 2 new repositories.
 
 ## Step 4 - Build the recovery image
+Run the AOSP environment script:
+```
+source build/envsetup.sh
+```
+
 Configure the build:
 ```
 lunch twrp_a32x-eng
