@@ -10,13 +10,31 @@
 - Relatively recent x86_64 processor (Like after a 2nd gen Intel processor)
 - 16GB RAM
 - 40GB HDD Space
-- Ubuntu 22.04 LTS
+- Ubuntu 18.04.6 LTS
 - An A326B Phone with it's bootloader unlocked, and ADB enabled (I will not be covering this here)
 
 ## Step 1 - Preparing the build environment
 Install the dependencies:
 ```
-sudo apt install git-core git git-lfs python3 python3-pip python-is-python3 gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig repo heimdall-flash
+sudo apt install git-core git git-lfs python3 python3-pip gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig heimdall-flash
+```
+
+For repo to work properly, the ```python``` executable needs to be Python 3. To do this in Ubuntu 18.04.6:
+```
+sudo rm /usr/bin/python
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+
+APT provides an old version of repo that isn't really functional now. To install the latest version of repo:
+```
+sudo wget https://storage.googleapis.com/git-repo-downloads/repo /usr/bin/repo
+sudo chmod +x /usr/bin/repo
+```
+
+To use repo, you need to initialize git:
+```
+git config --global user.email "Enter your email here"
+git config --global user.name "Enter your name here"
 ```
 
 Create a build directory:
