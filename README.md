@@ -63,7 +63,7 @@ Resync the repo with ```repo sync``` <br>
 Note: This won't take nearly as long because it only has to download 2 new repositories.
 
 ## Step 4 - Build the recovery image
-Run the AOSP environment script:
+Run the AOSP environment setup script:
 ```
 source build/envsetup.sh
 ```
@@ -104,4 +104,4 @@ I am not responsible for you bricking your phone. <br>
 Also please backup the phone's ROM or at least have a ROM you can flash back onto your phone in the case of a brickage.
 
 # References
-blah
+afaneh92 from forum.xda-developers.com - For the original project, and the vbmeta.img (I don't know what vbmeta is, but it is required)
