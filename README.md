@@ -1,5 +1,8 @@
 # TWRP for Samsung Galaxy A32 5G (a32x/A326B)
 
+## Notice
+Just a quick notice, I cannot work on this phone anymore due to me not owning it anymore. I will (of course) leave this repository here in case anyone needs the TWRP build or the build instructions in the future. :)
+
 # Issues / Todo
 - Check if all the mount points are correct
 - Fix issue with kernel not compiling (Currently using prebuilt kernel extracted from original OS)
